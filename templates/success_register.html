@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+    <style>
+        
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            margin-top: 50px; 
+        }
+        
+        .container { 
+            max-width: 500px; 
+            margin: auto; 
+            padding: 20px; 
+            border: 1px solid #ccc; 
+            border-radius: 10px; 
+        }
+        
+        h1 { 
+            color: #5cb85c; 
+        }
+        
+        a { 
+            display: block; 
+            margin-top: 20px; 
+            color: #5cb85c; 
+            text-decoration: none; 
+        }
+        
+        a:hover { 
+            text-decoration: underline; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Successful!</h1>
+        <p>Thank you, {{ firstname }} {{ lastname }}! Your registration is complete.</p>
+        <a href="/login">Go to Login</a>
+    </div>
+</body>
+</html>

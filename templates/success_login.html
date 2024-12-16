@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Successful</title>
+    <style>
+        
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            margin-top: 50px; 
+        }
+        
+        .container { 
+            max-width: 500px; 
+            margin: auto; 
+            padding: 20px; 
+            border: 1px solid #ccc; 
+            border-radius: 10px; 
+        }
+        
+        h1 { 
+            color: #5cb85c; 
+        }
+        
+        a { 
+            display: block; 
+            margin-top: 20px; 
+            color: #5cb85c; 
+            text-decoration: none; 
+        }
+        
+        a:hover { 
+            text-decoration: underline; 
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {{ firstname }} {{ lastname }}!</h1>
+        <p>Email: {{ email }}</p>
+        <p>Phone: {{ phone }}</p>
+
+        <h2>Office Details</h2>
+    {% if office_details %}
+        <p>Phone Number: {{ office_details[1] or "Not Available" }}</p>
+        <p>Office ID Name: {{ office_details[2] }}</p>
+        <p>Payment: {{ office_details[3] }}</p>
+    {% else %}
+        <p>No office details available yet.</p>
+    {% endif %}
+        
+        <a href="/">Go to Home</a>
+    </div>
+</body>
+</html>
